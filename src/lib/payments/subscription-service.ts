@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { findUserByEmail, findUserById } from "@/lib/auth/repository";
+import { randomAvatarUrl } from "@/lib/auth/avatar";
 import { sendMail } from "@/lib/auth/mail";
 import { subscriptionConfirmationEmail } from "@/lib/auth/email-templates";
 import { generateActivationKey, formatActivationKey } from "@/lib/payments/activation-key";
@@ -234,13 +235,22 @@ export async function validateLicenseKey(rawKey: string): Promise<LicenseValidat
 
   let userName = subscription.customerName;
   let userEmail = subscription.customerEmail;
+  let imageUrl: string | null = null;
 
-  if (subscription.userId) {
-    const user = await findUserById(subscription.userId);
-    if (user) {
-      userName = user.name;
-      userEmail = user.email;
-    }
+  let accountUser = subscription.userId
+    ? await findUserById(subscription.userId)
+    : null;
+  if (!accountUser && subscription.customerEmail) {
+    accountUser = await findUserByEmail(subscription.customerEmail);
+  }
+  if (accountUser) {
+    userName = accountUser.name;
+    userEmail = accountUser.email;
+    imageUrl = accountUser.imageUrl;
+  }
+
+  if (!imageUrl?.startsWith("http")) {
+    imageUrl = randomAvatarUrl(userEmail || userName || formatted);
   }
 
   const payments = await findPaymentsForUser(subscription.userId ?? "", subscription.customerEmail);
@@ -250,6 +260,7 @@ export async function validateLicenseKey(rawKey: string): Promise<LicenseValidat
     user: {
       name: userName || userEmail.split("@")[0] || "User",
       email: userEmail,
+      imageUrl,
     },
     subscription: { ...toSummary(subscription), isActive: true },
     payments: payments.map((p) => ({

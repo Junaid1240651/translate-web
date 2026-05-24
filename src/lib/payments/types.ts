@@ -63,7 +63,7 @@ export interface PaymentSummary {
 export interface LicenseValidationResult {
   valid: boolean;
   message?: string;
-  user?: { name: string; email: string };
+  user?: { name: string; email: string; imageUrl?: string | null };
   subscription?: SubscriptionSummary;
   payments?: PaymentSummary[];
 }
