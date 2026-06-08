@@ -38,12 +38,12 @@ export default function AuthLayout({ children, title, subtitle }: AuthLayoutProp
           </h1>
 
           <p className="mb-12 max-w-md text-lg leading-relaxed text-muted-foreground">
-            Paste a YouTube link or create an audiobook — private, fast, and entirely on your Mac.
+            Upload any video or create an audiobook — private, fast, and entirely on your Mac.
           </p>
 
           <div className="space-y-4">
             {[
-              { icon: Play, text: "Instant YouTube video dubbing" },
+              { icon: Play, text: "Instant video dubbing — any format" },
               { icon: BookOpen, text: "Audiobook creator with voice samples" },
               { icon: Globe, text: "50+ languages supported" },
               { icon: Lock, text: "100% on-device — your data stays local" },

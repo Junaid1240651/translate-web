@@ -13,7 +13,7 @@ export default function FeaturesSection() {
             <span className="gradient-text">translate locally</span>
           </h2>
           <p className="text-base text-muted-foreground sm:text-lg">
-            A complete desktop experience for YouTube dubbing and audiobook creation — built
+            A complete desktop experience for video dubbing and audiobook creation — built
             for privacy, speed, and ease of use.
           </p>
         </div>

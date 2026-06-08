@@ -5,6 +5,6 @@ export const CONTACT_REASONS = [
   { value: "feature", label: "Feature Request", icon: "lightbulb" },
 ] as const;
 
-export const SUPPORT_EMAIL = "sales@oneorb.ai";
+export const SUPPORT_EMAIL = "notification@schedley.com";
 
 export type ContactReason = (typeof CONTACT_REASONS)[number]["value"];

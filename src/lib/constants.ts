@@ -26,7 +26,7 @@ export const HERO = {
   titleLine1: "Watch any video",
   titleLine2: "in your language",
   subtitle:
-    "Paste a YouTube link or turn a book into an audiobook. Video Translator dubs content on your Mac — private, fast, and entirely on your device.",
+    "Upload any video or turn a book into an audiobook. Video Translator dubs content on your Mac — private, fast, and entirely on your device.",
 };
 
 export const STATS = [
@@ -40,7 +40,7 @@ export const FEATURES = [
     icon: Play,
     title: "Video Translate",
     description:
-      "Paste any public YouTube link, pick a target language, and watch a fully dubbed version — generated locally on your Mac.",
+      "Upload any video file or paste a URL, pick a target language, and watch a fully dubbed version — generated locally on your Mac.",
   },
   {
     icon: BookOpen,
@@ -77,9 +77,9 @@ export const FEATURES = [
 export const STEPS = [
   {
     icon: Play,
-    title: "Paste & choose",
+    title: "Upload & choose",
     description:
-      "Drop in a YouTube URL or upload book text, then select your target language from the sidebar.",
+      "Drop in a video file or paste a URL, then select your target language from the sidebar.",
     status: "default" as const,
   },
   {
@@ -99,7 +99,7 @@ export const STEPS = [
 ];
 
 export const DEMO_STAGES = [
-  { label: "Fetching video", progress: 25 },
+  { label: "Loading video", progress: 25 },
   { label: "Transcribing speech", progress: 50 },
   { label: "Translating dialogue", progress: 75 },
   { label: "Generating dubbed audio", progress: 100 },
@@ -119,11 +119,11 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     content:
-      "I follow creators who only post in Korean. Video Translator lets me paste a link and watch the whole thing dubbed in English — without sending anything to the cloud.",
+      "I follow creators who only post in Korean. Video Translator lets me upload a video and watch the whole thing dubbed in English — without sending anything to the cloud.",
     author: "Sarah Kim",
     role: "Language learner",
     rating: 4.9,
-    highlight: "YouTube tutorials",
+    highlight: "Video tutorials",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
   },
   {
@@ -189,7 +189,7 @@ export const HERO_LANGUAGES = [
 ];
 
 export const HERO_HIGHLIGHTS = [
-  { label: "Video Translate", desc: "Dub any YouTube link" },
+  { label: "Video Translate", desc: "Dub any video file" },
   { label: "Audio Book", desc: "Text to spoken chapters" },
   { label: "100% private", desc: "Stays on your Mac" },
 ];
@@ -213,9 +213,9 @@ export interface FAQItem {
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "How do I translate a YouTube video?",
+    question: "How do I translate a video?",
     answer:
-      "Open Video Translate, paste any public YouTube URL, choose your target language, and click Translate and Watch. The app handles the rest on your Mac.",
+      "Open Video Translate, upload a video file or paste a video URL, choose your target language, and click Translate and Watch. The app handles the rest on your Mac.",
   },
   {
     question: "Why does the first run take longer?",
@@ -225,12 +225,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Do I need an internet connection?",
     answer:
-      "You need internet to fetch YouTube videos and for the initial model download. After setup, dubbing runs on your machine with no cloud processing.",
+      "You need internet for the initial model download. After setup, dubbing local video files runs entirely on your machine with no cloud processing.",
   },
   {
-    question: "Which YouTube links are supported?",
+    question: "Which video formats are supported?",
     answer:
-      "Any public YouTube video URL works — standard watch links, youtu.be short links, embed URLs, and Shorts. Private or age-restricted videos may fail.",
+      "Common formats like MP4, MOV, MKV, and AVI are supported. You can also paste a public video URL if the video is accessible online.",
   },
   {
     question: "How do I create an audiobook?",
@@ -250,7 +250,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Translation failed or stuck — what should I try?",
     answer:
-      "Restart the app, confirm the YouTube URL is public, and wait if first-run setup is still downloading models. Use Help Center → Contact Us if the issue persists.",
+      "Restart the app, confirm the video file is not corrupted and any URL is publicly accessible, and wait if first-run setup is still downloading models. Use Help Center → Contact Us if the issue persists.",
   },
 ];
 

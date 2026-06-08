@@ -15,8 +15,8 @@ export default function CTASection() {
             Ready to dub your first video?
           </h2>
           <p className="mb-8 text-base text-muted-foreground sm:text-lg">
-            Install the Mac desktop app, activate your license, and start translating YouTube
-            videos or creating audiobooks — all on your machine.
+            Install the Mac desktop app, activate your license, and start translating any
+            video or creating audiobooks — all on your machine.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a

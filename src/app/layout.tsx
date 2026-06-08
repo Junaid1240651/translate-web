@@ -15,16 +15,16 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Video Translator — Local AI Dubbing for YouTube & Audiobooks",
+  title: "Video Translator — Local AI Dubbing for Any Video & Audiobooks",
   description:
-    "Translate and dub YouTube videos on your Mac with local AI. Create audiobooks from text — private, fast, and entirely on your device.",
+    "Translate and dub any video on your Mac with local AI. Upload video files, create audiobooks from text — private, fast, and entirely on your device.",
   keywords: [
     "video translator",
-    "YouTube dubbing",
+    "video dubbing",
     "local AI",
     "audiobook creator",
     "Mac app",
-    "video dubbing",
+    "video translation",
   ],
 };
 

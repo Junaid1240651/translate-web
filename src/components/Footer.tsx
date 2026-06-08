@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="mb-6 max-w-sm text-xs text-muted-foreground sm:text-sm">
-              Local AI dubbing for YouTube videos and audiobooks. Translate and listen on your
+              Local AI dubbing for any video and audiobooks. Translate and listen on your
               Mac — private, fast, and entirely on your device.
             </p>
           </div>

@@ -14,9 +14,9 @@ import {
 import { DEMO_PIPELINE, STEPS } from "@/lib/constants";
 
 const DEMO_VIDEOS = [
-  { url: "youtube.com/watch?v=tech-talk-en", lang: "Japanese", title: "Tech conference keynote" },
-  { url: "youtube.com/watch?v=cooking-fr", lang: "English", title: "French cooking tutorial" },
-  { url: "youtube.com/watch?v=history-de", lang: "Spanish", title: "Documentary excerpt" },
+  { url: "tech-conference-keynote.mp4", lang: "Japanese", title: "Tech conference keynote" },
+  { url: "french-cooking-tutorial.mp4", lang: "English", title: "French cooking tutorial" },
+  { url: "history-documentary.mp4", lang: "Spanish", title: "Documentary excerpt" },
 ];
 
 export default function HowItWorksSection() {
@@ -58,7 +58,7 @@ export default function HowItWorksSection() {
             Paste, dub, <span className="gradient-text">enjoy</span>
           </h2>
           <p className="text-base text-muted-foreground sm:text-lg">
-            Drop a link, pick a language, and let Video Translator handle the rest — all on
+            Upload a video, pick a language, and let Video Translator handle the rest — all on
             your Mac, with real-time progress you can follow.
           </p>
         </div>
@@ -199,7 +199,7 @@ export default function HowItWorksSection() {
                 </p>
                 <ul className="space-y-2 sm:space-y-3">
                   {[
-                    "Paste any public YouTube URL and pick a target language",
+                    "Upload any video file or paste a URL, then pick a target language",
                     "Track dubbing progress step by step in real time",
                     "Create audiobooks from text with a short voice sample",
                     "Export transcripts and keep all files stored locally",
